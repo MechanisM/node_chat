@@ -1,5 +1,5 @@
 HOST = null; // localhost
-PORT = 33575;
+PORT = 43417;
 
 // when the daemon started
 var starttime = (new Date()).getTime();
