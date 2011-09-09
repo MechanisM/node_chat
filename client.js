@@ -232,6 +232,13 @@ function addMessage (from, text, time, _class) {
               ;
   messageElement.html(content);
 
+  // Register growl if it isn't, notify if it is
+  try{register();}
+  catch(e){null;}
+  if (growl_registered)
+  try {notify(util.toStaticHTML(from), text);}
+  catch(e) {null;}
+
   //the log is the stream that we view
   $("#log").append(messageElement);
 

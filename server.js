@@ -125,8 +125,14 @@ fu.listen(Number(process.env.PORT || PORT), HOST);
 fu.get("/", fu.staticHandler("index.html"));
 fu.get("/style.css", fu.staticHandler("style.css"));
 fu.get("/client.js", fu.staticHandler("client.js"));
-fu.get("/jquery-1.2.6.min.js", fu.staticHandler("jquery-1.2.6.min.js"));
-
+fu.get("http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js", fu.staticHandler("jquery-1.2.6.min.js"));
+fu.get("/swfobject.js", fu.staticHandler("swfobject.js"));
+fu.get("/growl.js", fu.staticHandler("growl.js"));
+fu.get("/growl_notify.js", fu.staticHandler("growl_notify.js"));
+fu.get("/GrowlFlashConnector.swf", fu.staticHandler("GrowlFlashConnector.swf"));
+fu.get("/favicon.ico", fu.staticHandler("favicon.ico"));
+fu.get("/growl.png", fu.staticHandler("growl.png"));
+fu.get("/nodechat.png", fu.staticHandler("nodechat.png"));
 
 fu.get("/who", function (req, res) {
   var nicks = [];
